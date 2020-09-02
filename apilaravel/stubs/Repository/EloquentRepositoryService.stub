@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Services\Repository\Eloquent{{path}};
+
+use App{{path}}\{{model}};
+use App\Repository\Eloquent{{path}}\{{model}}EloquentRepository;
+use App\Services\Repository\Contracts{{path}}\{{model}}RepositoryServiceInterface;
+use App\Services\Repository\Eloquent\WebControlEloquentRepositoryService;
+
+/**
+ * @author Tiago Franco
+ * Servico de acesso ao repositorio de Model
+ * Deverá possuir os metodos contendo operacoes de escrita 
+ * do modelo implementando a interface do repositorio
+ */
+class {{model}}EloquentRepositoryService extends WebControlEloquentRepositoryService implements {{model}}RepositoryServiceInterface
+{
+    public function __construct({{model}} $model, {{model}}EloquentRepository $repository)
+    {
+        parent::__construct($model, $repository);
+    }
+}

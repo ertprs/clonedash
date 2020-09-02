@@ -1,0 +1,11 @@
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Página de contato
+RewriteRule ^login/?$ login.php [NC,L]
+
+RewriteRule ^([/A-Za-z0-9_\-]+)$ index.php?p=$1
+

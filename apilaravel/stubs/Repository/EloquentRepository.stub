@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Repository\Eloquent{{path}};
+
+use App{{path}}\{{model}};
+use App\Repository\Contracts{{path}}\{{model}}RepositoryInterface;
+use App\Repository\Eloquent\WebControlEloquentRepository;
+
+/**
+ * @author Tiago Franco
+ * Repositorio para metodos de consultas dos clientes
+ * Todas as consultas deverá ser realizadas passando
+ * a conexao atraves do metodo ::connection(connection)
+ */
+class {{model}}EloquentRepository extends WebControlEloquentRepository implements {{model}}RepositoryInterface
+{
+    protected $model;
+    /**
+    * Instantiate reporitory
+    * 
+    * @param {{model}} $model
+    */
+    public function __construct({{model}} $model)
+    {
+        parent::__construct($model);
+    }
+}
